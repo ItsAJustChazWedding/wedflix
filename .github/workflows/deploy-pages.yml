@@ -3,6 +3,7 @@ name: Deploy WEDFLIX to GitHub Pages
 on:
   push:
     branches:
+      - main
       - claude/wedding-invitation-site-jio31p
   workflow_dispatch:
 
