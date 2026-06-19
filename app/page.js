@@ -56,12 +56,12 @@ export default function Page() {
       </section>
 
       {/* ===== FEATURED VIDEO ===== */}
-      <section className="wf-section" id="trailer">
+      <section className="wf-section" id="engagement">
         <div className="container">
           <div className="text-center mb-5">
-            <span className="wf-eyebrow">The Trailer</span>
+            <span className="wf-eyebrow">Now Streaming</span>
             <h2 className="wf-title">
-              Watch the <em>Invitation</em>
+              I Love <em>Chaz</em>
             </h2>
           </div>
           <div className="row justify-content-center">
@@ -71,9 +71,9 @@ export default function Page() {
                   controls
                   playsInline
                   preload="metadata"
-                  poster="assets/videos/invitation-poster.jpg"
+                  poster="assets/videos/engagement-poster.jpg"
                 >
-                  <source src="assets/videos/invitation.mp4" type="video/mp4" />
+                  <source src="assets/videos/engagement.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
