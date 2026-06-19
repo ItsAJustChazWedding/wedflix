@@ -1,3 +1,4 @@
+import Intro from "@/components/wedding/Intro";
 import Header from "@/components/wedding/Header";
 import Countdown from "@/components/wedding/Countdown";
 import StorySlider from "@/components/wedding/StorySlider";
@@ -12,6 +13,7 @@ const MAP_LINK =
 export default function Page() {
   return (
     <main>
+      <Intro />
       <Header />
 
       {/* ===== HERO ===== */}
