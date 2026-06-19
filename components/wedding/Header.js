@@ -16,8 +16,7 @@ const Header = () => {
         WEDFLIX
       </a>
       <nav className="wf-nav">
-        <a href="#engagement">Our Video</a>
-        <a href="#story">Our Story</a>
+        <a href="#episodes">Episodes</a>
         <a href="#details">Details</a>
         <a href="#registry">Registry</a>
         <a href="#faq">FAQ</a>

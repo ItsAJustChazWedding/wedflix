@@ -15,7 +15,7 @@ const SMILE = (
  * off to a "Who's joining?" profile gate. Picking a profile dismisses the gate
  * and jumps to the matching section:
  *   - "You're formally invited"  -> wedding details
- *   - "#ItsAJustChazWedding"     -> the engagement video
+ *   - "#ItsAJustChazWedding"     -> the episodes / videos
  * Shown once per browser session.
  */
 export default function Intro() {
@@ -66,7 +66,7 @@ export default function Intro() {
             <span className="wf-profile__avatar wf-profile__avatar--green">{SMILE}</span>
             <span className="wf-profile__name">You&rsquo;re formally invited</span>
           </button>
-          <button className="wf-profile" onClick={() => enter("engagement")}>
+          <button className="wf-profile" onClick={() => enter("episodes")}>
             <span className="wf-profile__avatar wf-profile__avatar--yellow">{SMILE}</span>
             <span className="wf-profile__name">#ItsAJustChazWedding</span>
           </button>

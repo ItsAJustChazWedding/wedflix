@@ -1,7 +1,7 @@
 import Intro from "@/components/wedding/Intro";
 import Header from "@/components/wedding/Header";
 import Countdown from "@/components/wedding/Countdown";
-import StorySlider from "@/components/wedding/StorySlider";
+import Episodes from "@/components/wedding/Episodes";
 import Faq from "@/components/wedding/Faq";
 import Rsvp from "@/components/wedding/Rsvp";
 
@@ -45,7 +45,7 @@ export default function Page() {
                   <i className="fas fa-play" /> RSVP Now
                 </span>
               </a>
-              <a href="#story" className="theme-btn">
+              <a href="#episodes" className="theme-btn">
                 <span>
                   Our Story <i className="fas fa-chevron-right" />
                 </span>
@@ -55,47 +55,25 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ===== FEATURED VIDEO ===== */}
-      <section className="wf-section" id="engagement">
+      {/* ===== EPISODES ===== */}
+      <section className="wf-section" id="episodes">
         <div className="container">
           <div className="text-center mb-5">
             <span className="wf-eyebrow">Now Streaming</span>
             <h2 className="wf-title">
-              I Love <em>Chaz</em>
-            </h2>
-          </div>
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <div className="wf-video">
-                <video
-                  controls
-                  playsInline
-                  preload="metadata"
-                  poster="assets/videos/engagement-poster.jpg"
-                >
-                  <source src="assets/videos/engagement.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== OUR STORY ===== */}
-      <section className="wf-section alt" id="story">
-        <div className="container">
-          <div className="text-center mb-5">
-            <span className="wf-eyebrow">Now Streaming</span>
-            <h2 className="wf-title">
-              Our <em>Story</em> So Far
+              The <em>Episodes</em>
             </h2>
             <p className="wf-lead mx-auto mt-3">
-              Laughter, prayer, joy, and so much more beautifully encapsulate this love story
-              of two soon to become three.
+              Laughter, prayer, and joy beautifully encapsulate this love story of two soon to
+              become three. Press play on what&rsquo;s released — the rest unlocks as our story
+              unfolds.
             </p>
           </div>
-          <StorySlider />
+          <div className="row justify-content-center">
+            <div className="col-lg-9">
+              <Episodes />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -183,13 +161,21 @@ export default function Page() {
           </div>
           <div className="row g-4">
             <div className="col-md-4">
-              <div className="wf-registry-card">
+              <a
+                className="wf-registry-card"
+                href="https://withjoy.com/justchaz/registry"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <div className="ic">
                   <i className="fas fa-gift" />
                 </div>
                 <h4>Wish List</h4>
-                <p>A curated registry to help us start our new chapter. Link coming soon.</p>
-              </div>
+                <p>A curated registry to help us start our new chapter.</p>
+                <span className="wf-registry-card__cta">
+                  View Registry <i className="fas fa-chevron-right" />
+                </span>
+              </a>
             </div>
             <div className="col-md-4">
               <div className="wf-registry-card">
@@ -197,7 +183,11 @@ export default function Page() {
                   <i className="fas fa-plane" />
                 </div>
                 <h4>Honeymoon Fund</h4>
-                <p>Help send us off on the adventure of a lifetime as newlyweds.</p>
+                <p>
+                  Help send us off on the adventure of a lifetime as newlyweds. If CashApp
+                  isn&rsquo;t your jam and you fancy sending funds electronically, just give us a
+                  Zelle!
+                </p>
               </div>
             </div>
             <div className="col-md-4">
