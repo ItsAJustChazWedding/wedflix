@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <header className={`wf-header ${scrolled ? "scrolled" : ""}`}>
       <a href="#home" className="wf-logo">
-        WEDFLIX
+        <img src="assets/img/wedding/wedflix-logo.png" alt="WEDFLIX" />
       </a>
       <nav className="wf-nav">
         <a href="#details">Details</a>

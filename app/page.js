@@ -24,7 +24,7 @@ export default function Page() {
       <section className="wf-hero" id="home">
         <div
           className="wf-hero__bg"
-          style={{ backgroundImage: 'url("assets/img/wedding/couple-hero.jpg")' }}
+          style={{ backgroundImage: 'url("assets/img/wedding/home.jpg")' }}
         />
         <div className="wf-hero__scrim" />
         <div className="container">
@@ -60,7 +60,14 @@ export default function Page() {
       </section>
 
       {/* ===== EVENT DETAILS + MAP ===== */}
-      <section className="wf-section" id="details">
+      <section
+        className="wf-section wf-section--photo"
+        id="details"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(13,13,16,0.9), rgba(13,13,16,0.93)), url("assets/img/wedding/details.jpg")',
+        }}
+      >
         <div className="container">
           <div className="text-center mb-5">
             <span className="wf-eyebrow">The Main Event</span>
