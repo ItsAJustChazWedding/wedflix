@@ -49,9 +49,6 @@ export default function Intro() {
     return (
       <div className="wf-intro" aria-hidden="true">
         <h1 className="wf-intro__logo">WEDFLIX</h1>
-        <button className="wf-intro__skip" onClick={() => setPhase("profiles")}>
-          Skip intro &rsaquo;
-        </button>
       </div>
     );
   }
