@@ -30,8 +30,6 @@ jobs:
       # Enables GitHub Pages (build type = GitHub Actions) if it isn't already
       - name: Configure Pages
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       # The site is a static site served from the repo root
       - name: Upload site artifact
