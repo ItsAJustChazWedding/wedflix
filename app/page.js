@@ -42,7 +42,9 @@ export default function Page() {
               WEDDING &nbsp;&bull;&nbsp; ROMCOM &nbsp;&bull;&nbsp; 2026 &nbsp;&bull;&nbsp; FOREVER
             </p>
             <p className="wf-hero__tag">
-              Justin &amp; Chastidy request the pleasure of your company.
+              Laughter, prayer, joy, and so much more beautifully encapsulate this love story of
+              two soon to become three. To truly summarize this journey, one could say,
+              &ldquo;When patience transforms into the greatest love story.&rdquo;
             </p>
             <Countdown />
             <div className="wf-hero__btns">
@@ -76,6 +78,9 @@ export default function Page() {
             <h2 className="wf-title">
               When &amp; <em>Where</em>
             </h2>
+            <p className="wf-lead mx-auto mt-3">
+              Justin &amp; Chastidy request the pleasure of your company.
+            </p>
           </div>
           <div className="row g-4 align-items-stretch">
             <div className="col-lg-4">
@@ -84,11 +89,7 @@ export default function Page() {
                   <i className="fas fa-calendar-alt" />
                 </div>
                 <h4>Date &amp; Time</h4>
-                <p>
-                  Saturday, September 12, 2026
-                  <br />
-                  Ceremony begins at 4:00 PM
-                </p>
+                <p>Saturday, September 12, 2026 Ceremony begins at 4:00 PM</p>
               </div>
             </div>
             <div className="col-lg-4">
@@ -145,9 +146,7 @@ export default function Page() {
               The <em>Episodes</em>
             </h2>
             <p className="wf-lead mx-auto mt-3">
-              Laughter, prayer, and joy beautifully encapsulate this love story of two soon to
-              become three. Press play on what&rsquo;s released — the rest unlocks as our story
-              unfolds.
+              Press play on what&rsquo;s released — the rest unlocks as our story unfolds.
             </p>
           </div>
           <div className="row justify-content-center">
