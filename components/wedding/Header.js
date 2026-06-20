@@ -13,15 +13,14 @@ const Header = () => {
   return (
     <header className={`wf-header ${scrolled ? "scrolled" : ""}`}>
       <a href="#home" className="wf-logo">
-        WEDFLIX
+        <img src="assets/img/wedding/wedflix-logo.png" alt="WEDFLIX" />
       </a>
       <nav className="wf-nav">
-        <a href="#trailer">Trailer</a>
-        <a href="#story">Our Story</a>
         <a href="#details">Details</a>
-        <a href="#registry">Registry</a>
-        <a href="#faq">FAQ</a>
         <a href="#rsvp">RSVP</a>
+        <a href="#episodes">Episodes</a>
+        <a href="#registry">Gifts</a>
+        <a href="#faq">FAQ</a>
       </nav>
     </header>
   );

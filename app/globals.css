@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Great+Vibes&family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&family=Montserrat:wght@400;500;600;700&family=Noto+Serif+Display:ital,wdth,wght@0,62.5..100,400;0,62.5..100,600;0,62.5..100,700;1,62.5..100,400;1,62.5..100,600&family=Work+Sans:wght@400;500;600&display=swap");
 
 /* ============================================================
    WEDFLIX — wedding customisations layered on the Netband theme
@@ -6,6 +6,11 @@
 :root {
   --wf-red: #d6111e;
   --wf-dark: #0d0d10;
+}
+
+/* Base body copy — Montserrat (matches the brand sheet) */
+body {
+  font-family: "Montserrat", sans-serif;
 }
 
 /* ---- WEDFLIX intro animation ---- */
@@ -22,55 +27,29 @@
   animation: wfIntroOut 0.7s ease forwards;
 }
 .wf-intro__logo {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: clamp(3.5rem, 16vw, 11rem);
-  letter-spacing: 0.06em;
-  margin: 0;
-  background: linear-gradient(180deg, #ff2d38 0%, var(--wf-red) 45%, #7d0509 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transform: scaleY(1.18);
+  width: clamp(220px, 42vw, 640px);
+  height: auto;
   opacity: 0;
-  text-shadow: 0 0 60px rgba(214, 17, 30, 0.4);
+  filter: drop-shadow(0 0 60px rgba(214, 17, 30, 0.4));
   animation: wfIntroZoom 3.2s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
-}
-.wf-intro__skip {
-  position: absolute;
-  bottom: 7%;
-  right: 7%;
-  background: rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  color: #fff;
-  border-radius: 4px;
-  padding: 8px 16px;
-  font-size: 0.85rem;
-  cursor: pointer;
-  opacity: 0;
-  animation: wfFadeIn 0.5s ease 1s forwards;
-}
-.wf-intro__skip:hover {
-  background: rgba(255, 255, 255, 0.15);
 }
 @keyframes wfIntroZoom {
   0% {
     opacity: 0;
-    transform: scaleY(1.18) scale(2.4);
-    letter-spacing: 0.5em;
-    filter: blur(6px);
+    transform: scale(2.4);
+    filter: blur(6px) drop-shadow(0 0 60px rgba(214, 17, 30, 0.4));
   }
   35% {
     opacity: 1;
-    filter: blur(0);
+    filter: blur(0) drop-shadow(0 0 60px rgba(214, 17, 30, 0.4));
   }
   60% {
     opacity: 1;
-    transform: scaleY(1.18) scale(1);
-    letter-spacing: 0.06em;
+    transform: scale(1);
   }
   100% {
     opacity: 1;
-    transform: scaleY(1.18) scale(1);
+    transform: scale(1);
   }
 }
 @keyframes wfIntroOut {
@@ -91,6 +70,8 @@
   inset: 0;
   z-index: 1999;
   background: radial-gradient(circle at 50% 30%, #1a1a1a, #000 70%);
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,7 +88,8 @@
   margin-bottom: 14px;
 }
 .wf-profiles__title {
-  font-family: "Playfair Display", serif;
+  font-family: "Noto Serif Display", serif;
+  font-stretch: 62.5%;
   font-weight: 500;
   font-size: clamp(1.6rem, 5vw, 2.6rem);
   margin-bottom: 48px;
@@ -153,10 +135,15 @@
   stroke: #1a1a1a;
 }
 .wf-profile__avatar--green {
-  background: linear-gradient(145deg, #3ddc84, #16a34a);
+  background: #122620;
+}
+/* Light smile so it reads on the dark green */
+.wf-profile__avatar--green svg {
+  fill: #c8a47b;
+  stroke: #c8a47b;
 }
 .wf-profile__avatar--yellow {
-  background: linear-gradient(145deg, #ffd84d, #f5a623);
+  background: #c8a47b;
 }
 .wf-profile__name {
   font-size: 0.95rem;
@@ -165,11 +152,14 @@
 
 /* ---- Elegant display type for headings ---- */
 .wf-script {
-  font-family: "Great Vibes", cursive;
+  font-family: "Noto Serif Display", serif;
+  font-stretch: 62.5%;
+  font-style: italic;
   font-weight: 400;
 }
 .wf-serif {
-  font-family: "Playfair Display", serif;
+  font-family: "Noto Serif Display", serif;
+  font-stretch: 62.5%;
 }
 
 /* ---- Simple sticky site header ---- */
@@ -190,13 +180,20 @@
   box-shadow: 0 2px 18px rgba(0, 0, 0, 0.5);
 }
 .wf-logo {
-  font-family: "Bebas Neue", sans-serif;
-  color: var(--wf-red);
-  font-size: 2rem;
-  letter-spacing: 0.04em;
-  line-height: 1;
-  transform: scaleY(1.08);
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
   text-decoration: none;
+}
+.wf-logo img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+@media (max-width: 575px) {
+  .wf-logo img {
+    height: 22px;
+  }
 }
 .wf-nav {
   display: flex;
@@ -204,6 +201,7 @@
   align-items: center;
 }
 .wf-nav a {
+  font-family: "Work Sans", sans-serif;
   color: #fff;
   text-decoration: none;
   font-size: 0.95rem;
@@ -238,6 +236,15 @@
   filter: brightness(1.05);
   transform: scale(1.05);
   animation: wfZoom 20s ease-in-out infinite alternate;
+}
+.wf-hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 28%;
+  filter: brightness(1.05);
 }
 @keyframes wfZoom {
   to {
@@ -282,18 +289,20 @@
 }
 .wf-hero h1 {
   color: #fff;
-  font-family: "Playfair Display", serif;
+  font-family: "Noto Serif Display", serif;
+  font-stretch: 62.5%;
   font-weight: 700;
   font-size: clamp(2.8rem, 8vw, 6rem);
   line-height: 0.95;
   margin: 0 0 6px;
 }
 .wf-hero h1 em {
-  font-family: "Great Vibes", cursive;
-  font-style: normal;
+  font-family: "Noto Serif Display", serif;
+  font-stretch: 62.5%;
+  font-style: italic;
   font-weight: 400;
   color: #fff;
-  font-size: 1.05em;
+  font-size: 1em;
 }
 .wf-hero__meta {
   letter-spacing: 0.18em;
@@ -368,6 +377,151 @@
   display: block;
 }
 
+/* ---- Episodes list ---- */
+.wf-episodes {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.wf-ep {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px;
+  border: 1px solid #26262e;
+  border-radius: 14px;
+  background: #16161b;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.wf-ep:not(.is-locked):hover {
+  background: #1d1d24;
+  border-color: var(--wf-red);
+  transform: translateY(-2px);
+}
+.wf-ep:not(.is-locked):hover .wf-ep__overlay {
+  opacity: 1;
+}
+.wf-ep__num {
+  flex: 0 0 auto;
+  width: 34px;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.8rem;
+  color: #8a8a93;
+}
+.wf-ep__thumb {
+  position: relative;
+  flex: 0 0 auto;
+  width: 150px;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+}
+.wf-ep__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.wf-ep__overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font-size: 1.3rem;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+.wf-ep__body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.wf-ep__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.wf-ep__head h4 {
+  color: #fff;
+  font-family: "Noto Serif Display", serif;
+  font-stretch: 62.5%;
+  font-size: 1.15rem;
+  margin: 0;
+}
+.wf-ep__time {
+  flex: 0 0 auto;
+  color: #8a8a93;
+  font-size: 0.82rem;
+}
+.wf-ep__body p {
+  color: #b9b9bf;
+  font-size: 0.9rem;
+  margin: 6px 0 0;
+}
+.wf-ep.is-locked {
+  cursor: default;
+  opacity: 0.6;
+}
+.wf-ep.is-locked .wf-ep__thumb img {
+  filter: grayscale(1) brightness(0.7);
+}
+.wf-ep.is-locked .wf-ep__overlay {
+  background: rgba(0, 0, 0, 0.55);
+}
+@media (max-width: 575px) {
+  .wf-ep__num {
+    display: none;
+  }
+  .wf-ep__thumb {
+    width: 110px;
+  }
+}
+
+/* ---- Episode video modal ---- */
+.wf-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1500;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: wfFadeIn 0.2s ease both;
+}
+.wf-modal__inner {
+  position: relative;
+  width: min(900px, 100%);
+}
+.wf-modal__close {
+  position: absolute;
+  top: -42px;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.wf-modal__close:hover {
+  background: var(--wf-red);
+}
+.wf-modal__title {
+  text-align: center;
+  color: #cfcfcf;
+  margin: 14px 0 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+}
+
 /* ---- Generic dark sections ---- */
 .wf-section {
   background: var(--wf-dark);
@@ -376,6 +530,11 @@
 }
 .wf-section.alt {
   background: #131318;
+}
+.wf-section--photo {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 .wf-eyebrow {
   color: var(--wf-red);
@@ -387,7 +546,8 @@
   margin-bottom: 12px;
 }
 .wf-title {
-  font-family: "Playfair Display", serif;
+  font-family: "Noto Serif Display", serif;
+  font-stretch: 62.5%;
   font-weight: 700;
   color: #fff;
   font-size: clamp(2rem, 5vw, 3.2rem);
@@ -395,8 +555,9 @@
   margin: 0;
 }
 .wf-title em {
-  font-family: "Great Vibes", cursive;
-  font-style: normal;
+  font-family: "Noto Serif Display", serif;
+  font-stretch: 62.5%;
+  font-style: italic;
   color: var(--wf-red);
 }
 .wf-lead {
@@ -448,7 +609,8 @@
 }
 .wf-card__body h4 {
   color: #fff;
-  font-family: "Playfair Display", serif;
+  font-family: "Noto Serif Display", serif;
+  font-stretch: 62.5%;
   font-size: 1.25rem;
   margin: 0 0 6px;
 }
@@ -479,13 +641,40 @@
 }
 .wf-detail-card h4 {
   color: #fff;
-  font-family: "Playfair Display", serif;
+  font-family: "Noto Serif Display", serif;
+  font-stretch: 62.5%;
   margin-bottom: 8px;
 }
 .wf-detail-card p {
   color: #b9b9bf;
   margin: 0;
 }
+button.wf-detail-card {
+  width: 100%;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+button.wf-detail-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--wf-red);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
+}
+.wf-detail-card__cta {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--wf-red);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.wf-detail-card__cta i {
+  margin-right: 6px;
+}
+
 .wf-map {
   border-radius: 14px;
   overflow: hidden;
@@ -513,7 +702,8 @@
   background: none;
   border: none;
   color: #fff;
-  font-family: "Playfair Display", serif;
+  font-family: "Noto Serif Display", serif;
+  font-stretch: 62.5%;
   font-size: 1.1rem;
   padding: 20px 24px;
   cursor: pointer;
@@ -544,12 +734,22 @@
 
 /* ---- Registry ---- */
 .wf-registry-card {
+  display: block;
   background: #1a1a20;
   border: 1px solid #26262e;
   border-radius: 14px;
   padding: 30px;
   text-align: center;
   height: 100%;
+}
+a.wf-registry-card {
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+a.wf-registry-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--wf-red);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
 }
 .wf-registry-card .ic {
   font-size: 2rem;
@@ -558,10 +758,24 @@
 }
 .wf-registry-card h4 {
   color: #fff;
-  font-family: "Playfair Display", serif;
+  font-family: "Noto Serif Display", serif;
+  font-stretch: 62.5%;
 }
 .wf-registry-card p {
   color: #b9b9bf;
+}
+.wf-registry-card__cta {
+  display: inline-block;
+  margin-top: 6px;
+  color: var(--wf-red);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.wf-registry-card__cta i {
+  font-size: 0.7rem;
+  margin-left: 4px;
 }
 
 /* ---- RSVP form ---- */
@@ -600,6 +814,10 @@
 }
 
 /* ---- Theme button override to the WEDFLIX red & a white variant ---- */
+.theme-btn,
+.theme-btn span {
+  font-family: "DM Sans", sans-serif;
+}
 .theme-btn {
   background: var(--wf-red);
   cursor: pointer;
@@ -632,4 +850,21 @@
   color: #ddd;
   margin-top: 14px;
   font-size: 0.85rem;
+}
+.wf-ending__link {
+  display: inline-block;
+  margin-top: 22px;
+  color: #fff;
+  text-decoration: none;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  padding: 10px 22px;
+  transition: 0.2s;
+}
+.wf-ending__link:hover {
+  background: var(--wf-red);
+  border-color: var(--wf-red);
 }

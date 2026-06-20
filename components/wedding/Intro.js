@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const SMILE = (
   <svg viewBox="0 0 100 100" aria-hidden="true">
@@ -11,16 +11,17 @@ const SMILE = (
 );
 
 /**
- * WEDFLIX intro — the Netflix-style logo zoom plays on first load, then hands
- * off to a "Who's joining?" profile gate. Picking a profile dismisses the gate
- * and jumps to the matching section:
+ * WEDFLIX intro — the Netflix-style logo zoom (with the "ta-dum" sound) plays
+ * on first load, then hands off to a "Who's joining?" profile gate. Picking a
+ * profile dismisses the gate and jumps to the matching section:
  *   - "You're formally invited"  -> wedding details
- *   - "#ItsAJustChazWedding"     -> the invitation video
+ *   - "#ItsAJustChazWedding"     -> the episodes / videos
  * Shown once per browser session.
  */
 export default function Intro() {
   // "intro" -> logo animation, "profiles" -> profile gate, null -> done
   const [phase, setPhase] = useState(null);
+  const audioRef = useRef(null);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -28,8 +29,26 @@ export default function Intro() {
 
     setPhase("intro");
     document.body.style.overflow = "hidden";
+
+    // Play the Netflix "ta-dum". Browsers often block sound until a user
+    // gesture, so also start it on the first interaction as a fallback.
+    const audio = audioRef.current;
+    const tryPlay = () => audio && audio.play().catch(() => {});
+    tryPlay();
+    const onFirst = () => {
+      tryPlay();
+      window.removeEventListener("pointerdown", onFirst);
+      window.removeEventListener("keydown", onFirst);
+    };
+    window.addEventListener("pointerdown", onFirst);
+    window.addEventListener("keydown", onFirst);
+
     const timer = setTimeout(() => setPhase("profiles"), 4400);
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("pointerdown", onFirst);
+      window.removeEventListener("keydown", onFirst);
+    };
   }, []);
 
   function enter(targetId) {
@@ -48,16 +67,20 @@ export default function Intro() {
   if (phase === "intro") {
     return (
       <div className="wf-intro" aria-hidden="true">
-        <h1 className="wf-intro__logo">WEDFLIX</h1>
-        <button className="wf-intro__skip" onClick={() => setPhase("profiles")}>
-          Skip intro &rsaquo;
-        </button>
+        <audio ref={audioRef} src="assets/audio/netflix-intro.mp3" preload="auto" />
+        <img className="wf-intro__logo" src="assets/img/wedding/wedflix-logo.png" alt="WEDFLIX" />
       </div>
     );
   }
 
   return (
-    <section className="wf-profiles">
+    <section
+      className="wf-profiles"
+      style={{
+        backgroundImage:
+          'linear-gradient(rgba(13,13,16,0.72), rgba(13,13,16,0.9)), url("assets/img/wedding/profile.jpg")',
+      }}
+    >
       <div className="wf-profiles__inner">
         <p className="wf-profiles__eyebrow">A JustChaz Invitation</p>
         <h2 className="wf-profiles__title">Who&rsquo;s joining the celebration?</h2>
@@ -66,7 +89,7 @@ export default function Intro() {
             <span className="wf-profile__avatar wf-profile__avatar--green">{SMILE}</span>
             <span className="wf-profile__name">You&rsquo;re formally invited</span>
           </button>
-          <button className="wf-profile" onClick={() => enter("trailer")}>
+          <button className="wf-profile" onClick={() => enter("episodes")}>
             <span className="wf-profile__avatar wf-profile__avatar--yellow">{SMILE}</span>
             <span className="wf-profile__name">#ItsAJustChazWedding</span>
           </button>
