@@ -17,10 +17,10 @@ const Header = () => {
       </a>
       <nav className="wf-nav">
         <a href="#details">Details</a>
-        <a href="#registry">Registry</a>
-        <a href="#faq">FAQ</a>
         <a href="#rsvp">RSVP</a>
         <a href="#episodes">Episodes</a>
+        <a href="#registry">Gifts</a>
+        <a href="#faq">FAQ</a>
       </nav>
     </header>
   );
