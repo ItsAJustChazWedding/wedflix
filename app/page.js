@@ -26,7 +26,7 @@ export default function Page() {
           playsInline
           poster="assets/img/wedding/home.jpg"
         >
-          <source src="assets/videos/engagement.mp4" type="video/mp4" />
+          <source src="assets/videos/the-before.mp4" type="video/mp4" />
         </video>
         <div className="wf-hero__scrim" />
         <div className="container">
@@ -69,7 +69,7 @@ export default function Page() {
         id="details"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(13,13,16,0.9), rgba(13,13,16,0.93)), url("assets/img/wedding/details.jpg")',
+            'linear-gradient(rgba(13,13,16,0.5), rgba(13,13,16,0.68)), url("assets/img/wedding/details.jpg")',
         }}
       >
         <div className="container">

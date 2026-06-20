@@ -27,10 +27,17 @@ export default function VenueMap() {
 
   return (
     <>
-      <button
-        type="button"
+      <div
         className="wf-detail-card wf-detail-card--btn"
+        role="button"
+        tabIndex={0}
         onClick={() => setOpen(true)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            setOpen(true);
+          }
+        }}
         aria-haspopup="dialog"
       >
         <div className="ic">
@@ -45,7 +52,7 @@ export default function VenueMap() {
         <span className="wf-detail-card__cta">
           <i className="fas fa-map" /> Tap to view map
         </span>
-      </button>
+      </div>
 
       {open && (
         <div className="wf-modal" onClick={() => setOpen(false)} role="dialog" aria-modal="true">

@@ -2,11 +2,55 @@
 import { useRef, useState } from "react";
 
 const ITEMS = [
-  { q: "When and where is the wedding?", a: "Saturday, September 12, 2026 at 4:00 PM. Both the ceremony and reception are at The Birchwood Manor, 111 N Jefferson Rd, Whippany, NJ 07981." },
-  { q: "What should I wear?", a: "Formal / black-tie optional. Dress to celebrate — and to dance!" },
-  { q: "When should I arrive?", a: "Please arrive by 3:30 PM so we can begin the ceremony promptly at 4:00 PM." },
-  { q: "Can I bring a guest?", a: "Please refer to your invitation for the number of seats reserved in your name." },
-  { q: "When is the RSVP deadline?", a: "Kindly confirm your attendance by 10:30 PM on August 8, 2026 using the RSVP form below." },
+  {
+    q: "What does JustChaz mean?",
+    a: <p>Justin + Chastidy = JustChaz.</p>,
+  },
+  {
+    q: "Can I bring a date?",
+    a: (
+      <p>
+        Please review your invitation regarding a +1&hellip; You will find that the answer is a
+        no. Unfortunately, there will be no +1 allowed.
+      </p>
+    ),
+  },
+  {
+    q: "Are children welcome?",
+    a: (
+      <p>
+        We adore your little ones, but please know that this is strictly an event for adults,
+        with a few exceptions for teenagers (13+). Aside from the chit-lins in the bridal party,
+        there will be no additional included in the ceremony or reception.
+      </p>
+    ),
+  },
+  {
+    q: "Is there a dress code?",
+    a: (
+      <>
+        <p>Fashionably Elegant! Which means:</p>
+        <ul className="wf-faq-list">
+          <li>NO sweats</li>
+          <li>NO jeans</li>
+          <li>NO hoodies</li>
+          <li>NO sneakers</li>
+        </ul>
+        <p>
+          If I have to dress up, so do you! <em>(Chaz wrote this)</em>
+        </p>
+      </>
+    ),
+  },
+  {
+    q: "Are there any colors that guests should avoid wearing?",
+    a: (
+      <p>
+        Kindly refrain from wearing white, emerald green/green, gold, and/or
+        champagne/tan/beige attire.
+      </p>
+    ),
+  },
 ];
 
 const Faq = () => {
@@ -31,7 +75,7 @@ const Faq = () => {
               ref={(el) => (refs.current[i] = el)}
               style={{ maxHeight: isOpen && refs.current[i] ? refs.current[i].scrollHeight : 0 }}
             >
-              <p>{item.a}</p>
+              {item.a}
             </div>
           </div>
         );

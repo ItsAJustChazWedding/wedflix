@@ -650,14 +650,15 @@ body {
   color: #b9b9bf;
   margin: 0;
 }
-button.wf-detail-card {
-  width: 100%;
-  font: inherit;
-  color: inherit;
+/* The Netband theme hides <br> inside <p>; restore it for detail cards */
+.wf-detail-card p br {
+  display: revert;
+}
+.wf-detail-card--btn {
   cursor: pointer;
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
-button.wf-detail-card:hover {
+.wf-detail-card--btn:hover {
   transform: translateY(-4px);
   border-color: var(--wf-red);
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
@@ -731,6 +732,15 @@ button.wf-detail-card:hover {
   color: #b9b9bf;
   padding: 0 24px 22px;
   margin: 0;
+}
+.wf-faq-a p + ul.wf-faq-list,
+.wf-faq-a ul.wf-faq-list {
+  color: #b9b9bf;
+  margin: -10px 0 0;
+  padding: 0 24px 18px 44px;
+}
+.wf-faq-list li {
+  margin: 3px 0;
 }
 
 /* ---- Registry ---- */
