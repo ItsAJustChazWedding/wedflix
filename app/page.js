@@ -107,7 +107,58 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ===== REGISTRY ===== */}
+      {/* ===== RSVP ===== */}
+      <section className="wf-section alt" id="rsvp">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-8 text-center">
+              <div className="mb-4">
+                <h2 className="wf-title">
+                  Reserve Your <em>Seat</em>
+                </h2>
+                <p className="wf-lead mx-auto mt-3">
+                  We sincerely hope you can join us — but we completely understand if you are
+                  unable to attend. Kindly respond by August 8, 2026.
+                </p>
+              </div>
+              <a
+                href={WITHJOY_RSVP}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="theme-btn wf-white"
+              >
+                <span>
+                  <i className="fas fa-play" /> RSVP on Our Website
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== EPISODES (extra) ===== */}
+      <section className="wf-section" id="episodes">
+        <div className="container">
+          <div className="text-center mb-5">
+            <span className="wf-eyebrow">Now Streaming</span>
+            <h2 className="wf-title">
+              The <em>Episodes</em>
+            </h2>
+            <p className="wf-lead mx-auto mt-3">
+              Laughter, prayer, and joy beautifully encapsulate this love story of two soon to
+              become three. Press play on what&rsquo;s released — the rest unlocks as our story
+              unfolds.
+            </p>
+          </div>
+          <div className="row justify-content-center">
+            <div className="col-lg-9">
+              <Episodes />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== GIFTS & REGISTRY ===== */}
       <section className="wf-section alt" id="registry">
         <div className="container">
           <div className="text-center mb-5">
@@ -186,57 +237,6 @@ export default function Page() {
                   </span>
                 </a>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== RSVP ===== */}
-      <section className="wf-section alt" id="rsvp">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-8 text-center">
-              <div className="mb-4">
-                <h2 className="wf-title">
-                  Reserve Your <em>Seat</em>
-                </h2>
-                <p className="wf-lead mx-auto mt-3">
-                  We sincerely hope you can join us — but we completely understand if you are
-                  unable to attend. Kindly respond by August 8, 2026.
-                </p>
-              </div>
-              <a
-                href={WITHJOY_RSVP}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="theme-btn wf-white"
-              >
-                <span>
-                  <i className="fas fa-play" /> RSVP on Our Website
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== EPISODES (extra) ===== */}
-      <section className="wf-section" id="episodes">
-        <div className="container">
-          <div className="text-center mb-5">
-            <span className="wf-eyebrow">Now Streaming</span>
-            <h2 className="wf-title">
-              The <em>Episodes</em>
-            </h2>
-            <p className="wf-lead mx-auto mt-3">
-              Laughter, prayer, and joy beautifully encapsulate this love story of two soon to
-              become three. Press play on what&rsquo;s released — the rest unlocks as our story
-              unfolds.
-            </p>
-          </div>
-          <div className="row justify-content-center">
-            <div className="col-lg-9">
-              <Episodes />
             </div>
           </div>
         </div>
