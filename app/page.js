@@ -22,10 +22,16 @@ export default function Page() {
 
       {/* ===== HERO ===== */}
       <section className="wf-hero" id="home">
-        <div
-          className="wf-hero__bg"
-          style={{ backgroundImage: 'url("assets/img/wedding/home.jpg")' }}
-        />
+        <video
+          className="wf-hero__video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="assets/img/wedding/home.jpg"
+        >
+          <source src="assets/videos/engagement.mp4" type="video/mp4" />
+        </video>
         <div className="wf-hero__scrim" />
         <div className="container">
           <div className="wf-hero__inner">
