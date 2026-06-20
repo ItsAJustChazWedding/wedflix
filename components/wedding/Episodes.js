@@ -15,7 +15,7 @@ const EPISODES = [
     n: 2,
     title: "The Engagement",
     desc: "Our engagement — the moment forever began. A little love story, on repeat.",
-    runtime: "0m 20s",
+    runtime: "2m 3s",
     poster: "assets/videos/engagement-poster.jpg",
     src: "assets/videos/engagement.mp4",
   },
