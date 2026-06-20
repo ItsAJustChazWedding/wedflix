@@ -4,6 +4,7 @@ import Countdown from "@/components/wedding/Countdown";
 import Episodes from "@/components/wedding/Episodes";
 import Faq from "@/components/wedding/Faq";
 import VenueMap from "@/components/wedding/VenueMap";
+import SocialWall from "@/components/wedding/SocialWall";
 
 const WITHJOY = "https://withjoy.com/justchaz";
 const WITHJOY_RSVP = "https://withjoy.com/justchaz/rsvp";
@@ -239,6 +240,24 @@ export default function Page() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ===== SOCIAL WALL ===== */}
+      <section className="wf-section alt" id="social">
+        <div className="container">
+          <div className="text-center mb-5">
+            <span className="wf-eyebrow">Trending Now</span>
+            <h2 className="wf-title">
+              On The <em>Gram</em>
+            </h2>
+            <p className="wf-lead mx-auto mt-3">
+              Tag your photos with{" "}
+              <strong style={{ color: "var(--wf-red)" }}>#ItsAJustChazWedding</strong> and watch
+              them show up right here.
+            </p>
+          </div>
+          <SocialWall />
         </div>
       </section>
 

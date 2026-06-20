@@ -21,6 +21,7 @@ const Header = () => {
         <a href="#episodes">Episodes</a>
         <a href="#registry">Gifts</a>
         <a href="#faq">FAQ</a>
+        <a href="#social">Social</a>
       </nav>
     </header>
   );

@@ -69,15 +69,33 @@ body {
   position: fixed;
   inset: 0;
   z-index: 1999;
-  background: radial-gradient(circle at 50% 30%, #1a1a1a, #000 70%);
-  background-size: cover;
-  background-position: center;
+  background: #000;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 24px;
   animation: wfFadeIn 0.6s ease both;
+}
+.wf-profiles__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.06);
+  animation: wfZoom 20s ease-in-out infinite alternate;
+  z-index: 0;
+}
+.wf-profiles__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: radial-gradient(circle at 50% 32%, rgba(13, 13, 16, 0.45), rgba(13, 13, 16, 0.82) 75%);
+}
+.wf-profiles__inner {
+  position: relative;
+  z-index: 2;
 }
 .wf-profiles__eyebrow {
   color: var(--wf-red);
@@ -521,6 +539,30 @@ body {
   margin: 14px 0 0;
   font-size: 0.9rem;
   letter-spacing: 0.04em;
+}
+
+/* ---- Social wall ---- */
+.wf-social {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.wf-social__placeholder {
+  text-align: center;
+  border: 1px dashed #3a3a44;
+  border-radius: 16px;
+  padding: clamp(36px, 7vw, 70px) 24px;
+  background: #16161b;
+}
+.wf-social__placeholder > i {
+  font-size: 2.6rem;
+  color: var(--wf-red);
+  margin-bottom: 16px;
+  display: block;
+}
+.wf-social__placeholder p {
+  color: #b9b9bf;
+  max-width: 46ch;
+  margin: 0 auto 22px;
 }
 
 /* ---- Generic dark sections ---- */

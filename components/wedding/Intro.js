@@ -74,13 +74,12 @@ export default function Intro() {
   }
 
   return (
-    <section
-      className="wf-profiles"
-      style={{
-        backgroundImage:
-          'linear-gradient(rgba(13,13,16,0.72), rgba(13,13,16,0.9)), url("assets/img/wedding/profile.jpg")',
-      }}
-    >
+    <section className="wf-profiles">
+      <div
+        className="wf-profiles__bg"
+        style={{ backgroundImage: 'url("assets/img/wedding/profile.jpg")' }}
+      />
+      <div className="wf-profiles__scrim" />
       <div className="wf-profiles__inner">
         <p className="wf-profiles__eyebrow">A JustChaz Invitation</p>
         <h2 className="wf-profiles__title">Who&rsquo;s joining the celebration?</h2>
