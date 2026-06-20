@@ -68,7 +68,7 @@ export default function Intro() {
     return (
       <div className="wf-intro" aria-hidden="true">
         <audio ref={audioRef} src="assets/audio/netflix-intro.mp3" preload="auto" />
-        <img className="wf-intro__logo" src="assets/img/wedding/wedflix-logo.png" alt="WEDFLIX" />
+        <h1 className="wf-intro__logo">WEDFLIX</h1>
       </div>
     );
   }
