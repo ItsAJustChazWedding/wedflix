@@ -303,6 +303,7 @@ body {
   font-weight: 400;
   color: #fff;
   font-size: 1em;
+  text-transform: lowercase;
 }
 .wf-hero__meta {
   letter-spacing: 0.18em;
