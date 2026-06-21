@@ -82,11 +82,11 @@ export default function Intro() {
       <div className="wf-profiles__scrim" />
       <div className="wf-profiles__inner">
         <p className="wf-profiles__eyebrow">A JustChaz Invitation</p>
-        <h2 className="wf-profiles__title">Who&rsquo;s joining the celebration?</h2>
+        <h2 className="wf-profiles__title">You&rsquo;re Formally Invited</h2>
         <div className="wf-profiles__grid">
           <button className="wf-profile" onClick={() => enter("details")}>
             <span className="wf-profile__avatar wf-profile__avatar--green">{SMILE}</span>
-            <span className="wf-profile__name">You&rsquo;re formally invited</span>
+            <span className="wf-profile__name">The Main Event</span>
           </button>
           <button className="wf-profile" onClick={() => enter("episodes")}>
             <span className="wf-profile__avatar wf-profile__avatar--yellow">{SMILE}</span>

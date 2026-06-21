@@ -550,6 +550,61 @@ body {
   letter-spacing: 0.04em;
 }
 
+/* ---- Password lock gate ---- */
+.wf-lock {
+  position: relative;
+}
+.wf-lock__content.is-locked {
+  filter: blur(12px);
+  pointer-events: none;
+  user-select: none;
+}
+.wf-lock__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  padding: 24px;
+  border-radius: 16px;
+  background: rgba(13, 13, 16, 0.55);
+  backdrop-filter: blur(2px);
+}
+.wf-lock__overlay i {
+  font-size: 2rem;
+  color: var(--wf-red);
+}
+.wf-lock__overlay h4 {
+  color: #fff;
+  font-family: "Noto Serif Display", serif;
+  font-stretch: 62.5%;
+  margin: 0;
+  font-size: 1.4rem;
+}
+.wf-lock__overlay p {
+  color: #d7d7dd;
+  margin: 0;
+  max-width: 42ch;
+}
+.wf-lock__form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 6px;
+}
+.wf-lock__input {
+  margin-bottom: 0;
+  max-width: 220px;
+}
+.wf-lock__err {
+  color: var(--wf-red) !important;
+  font-weight: 600;
+}
+
 /* ---- Social wall ---- */
 .wf-social {
   max-width: 1000px;

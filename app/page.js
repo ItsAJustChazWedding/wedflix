@@ -5,6 +5,7 @@ import Episodes from "@/components/wedding/Episodes";
 import Faq from "@/components/wedding/Faq";
 import VenueMap from "@/components/wedding/VenueMap";
 import SocialWall from "@/components/wedding/SocialWall";
+import LockGate from "@/components/wedding/LockGate";
 
 const WITHJOY = "https://withjoy.com/justchaz";
 const WITHJOY_RSVP = "https://withjoy.com/justchaz/rsvp";
@@ -83,29 +84,31 @@ export default function Page() {
               Justin &amp; Chastidy request the pleasure of your company.
             </p>
           </div>
-          <div className="row g-4 align-items-stretch">
-            <div className="col-lg-4">
-              <div className="wf-detail-card">
-                <div className="ic">
-                  <i className="fas fa-calendar-alt" />
+          <LockGate>
+            <div className="row g-4 align-items-stretch">
+              <div className="col-lg-4">
+                <div className="wf-detail-card">
+                  <div className="ic">
+                    <i className="fas fa-calendar-alt" />
+                  </div>
+                  <h4>Date &amp; Time</h4>
+                  <p>Saturday, September 12, 2026 Ceremony begins at 4:00 PM</p>
                 </div>
-                <h4>Date &amp; Time</h4>
-                <p>Saturday, September 12, 2026 Ceremony begins at 4:00 PM</p>
+              </div>
+              <div className="col-lg-4">
+                <VenueMap />
+              </div>
+              <div className="col-lg-4">
+                <div className="wf-detail-card">
+                  <div className="ic">
+                    <i className="fas fa-heart" />
+                  </div>
+                  <h4>Ceremony &amp; Reception</h4>
+                  <p>Both will be held at the same venue. Kindly RSVP by August 8, 2026.</p>
+                </div>
               </div>
             </div>
-            <div className="col-lg-4">
-              <VenueMap />
-            </div>
-            <div className="col-lg-4">
-              <div className="wf-detail-card">
-                <div className="ic">
-                  <i className="fas fa-heart" />
-                </div>
-                <h4>Ceremony &amp; Reception</h4>
-                <p>Both will be held at the same venue. Kindly RSVP by August 8, 2026.</p>
-              </div>
-            </div>
-          </div>
+          </LockGate>
         </div>
       </section>
 
