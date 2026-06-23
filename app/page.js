@@ -194,7 +194,12 @@ export default function Page() {
               </a>
             </div>
             <div className="col-md-4">
-              <div className="wf-registry-card">
+              <a
+                className="wf-registry-card"
+                href="https://withjoy.com/JustChaz/registry?pid=079ecbef-5da4-4e1b-b5ea-379eaac73529"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <div className="ic">
                   <i className="fas fa-plane" />
                 </div>
@@ -204,7 +209,10 @@ export default function Page() {
                   isn&rsquo;t your jam and you fancy sending funds electronically, just give us a
                   Zelle!
                 </p>
-              </div>
+                <span className="wf-registry-card__cta">
+                  Contribute <i className="fas fa-chevron-right" />
+                </span>
+              </a>
             </div>
             <div className="col-md-4">
               <div className="wf-registry-card">
