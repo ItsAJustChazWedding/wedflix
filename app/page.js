@@ -205,13 +205,12 @@ export default function Page() {
                 </div>
                 <h4>Honeymoon Fund</h4>
                 <p>
-                  Help send us off on the adventure of a lifetime as newlyweds. If CashApp
-                  isn&rsquo;t your jam and you fancy sending funds electronically, just give us a
-                  Zelle!
+                  Help send us off on the adventure of a lifetime as newlyweds. You can CashApp
+                  us at{" "}
+                  <strong style={{ color: "var(--wf-red)" }}>$ItsAJustChazWedding</strong>, but if
+                  that isn&rsquo;t your jam and you fancy sending funds electronically, just give
+                  us a Zelle! Which is connected to our phone numbers.
                 </p>
-                <span className="wf-registry-card__cta">
-                  Contribute <i className="fas fa-chevron-right" />
-                </span>
               </a>
             </div>
             <div className="col-md-4">
