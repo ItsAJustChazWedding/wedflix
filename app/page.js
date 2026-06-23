@@ -194,17 +194,24 @@ export default function Page() {
               </a>
             </div>
             <div className="col-md-4">
-              <div className="wf-registry-card">
+              <a
+                className="wf-registry-card"
+                href="https://withjoy.com/JustChaz/registry?pid=079ecbef-5da4-4e1b-b5ea-379eaac73529"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <div className="ic">
                   <i className="fas fa-plane" />
                 </div>
                 <h4>Honeymoon Fund</h4>
                 <p>
-                  Help send us off on the adventure of a lifetime as newlyweds. If CashApp
-                  isn&rsquo;t your jam and you fancy sending funds electronically, just give us a
-                  Zelle!
+                  Help send us off on the adventure of a lifetime as newlyweds. You can CashApp
+                  us at{" "}
+                  <strong style={{ color: "var(--wf-red)" }}>$ItsAJustChazWedding</strong>, but if
+                  that isn&rsquo;t your jam and you fancy sending funds electronically, just give
+                  us a Zelle! Which is connected to our phone numbers.
                 </p>
-              </div>
+              </a>
             </div>
             <div className="col-md-4">
               <div className="wf-registry-card">
