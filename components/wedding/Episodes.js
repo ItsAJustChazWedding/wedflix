@@ -29,7 +29,7 @@ const EPISODES = [
   },
   {
     n: 4,
-    title: "The Bridal Party",
+    title: "The Wedding Party",
     desc: "Meet the faces that said yes to being a part of our big day.",
     runtime: "Coming soon",
     poster: "assets/img/wedding/couple-7.jpg",
